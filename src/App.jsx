@@ -51,7 +51,28 @@ function ProtectedGetHiredLayout({ isAuthenticated }) {
 }
 
 function App() {
-  const [auth, setAuth] = useState(null);
+  const [auth, setAuth] = useState(() => {
+    const raw = sessionStorage.getItem(AUTH_STORAGE_KEY);
+    if (!raw) {
+      return null;
+    }
+
+    try {
+      const parsed = JSON.parse(raw);
+      return parsed?.verified ? parsed : null;
+    } catch {
+      return null;
+    }
+  });
+
+  useEffect(() => {
+    if (auth?.verified) {
+      sessionStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(auth));
+      return;
+    }
+
+    sessionStorage.removeItem(AUTH_STORAGE_KEY);
+  }, [auth]);
 
   return (
     <BrowserRouter>
