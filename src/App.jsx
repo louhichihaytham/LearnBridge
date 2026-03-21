@@ -38,28 +38,20 @@ function ProtectedCertificationLayout({ isAuthenticated }) {
   );
 }
 
+function ProtectedGetHiredLayout({ isAuthenticated }) {
+  const location = useLocation();
+
+  if (!isAuthenticated) {
+    return (
+      <Navigate to="/signin" replace state={{ from: location.pathname }} />
+    );
+  }
+
+  return <HelpPage isAuthenticated={isAuthenticated} />;
+}
+
 function App() {
-  const [auth, setAuth] = useState(() => {
-    const raw = localStorage.getItem(AUTH_STORAGE_KEY);
-    if (!raw) {
-      return null;
-    }
-
-    try {
-      return JSON.parse(raw);
-    } catch {
-      return null;
-    }
-  });
-
-  useEffect(() => {
-    if (auth?.verified) {
-      localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(auth));
-      return;
-    }
-
-    localStorage.removeItem(AUTH_STORAGE_KEY);
-  }, [auth]);
+  const [auth, setAuth] = useState(null);
 
   return (
     <BrowserRouter>
@@ -86,7 +78,11 @@ function App() {
           />
           <Route
             path="/get-hired"
-            element={<HelpPage isAuthenticated={Boolean(auth?.verified)} />}
+            element={
+              <ProtectedGetHiredLayout
+                isAuthenticated={Boolean(auth?.verified)}
+              />
+            }
           />
           <Route
             path="/payment"

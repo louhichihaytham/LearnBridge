@@ -82,7 +82,6 @@ function UniversityLogin({ onVerified, isAuthenticated }) {
       username: username.trim(),
       email: email.trim(),
       studentCardName: studentCard.name,
-      rememberMe,
       verifiedAt: new Date().toISOString(),
     });
 
@@ -137,15 +136,6 @@ function UniversityLogin({ onVerified, isAuthenticated }) {
               onChange={(event) => setShowPassword(event.target.checked)}
             />
             Show password
-          </label>
-
-          <label className="inline-option">
-            <input
-              type="checkbox"
-              checked={rememberMe}
-              onChange={(event) => setRememberMe(event.target.checked)}
-            />
-            Remember me
           </label>
 
           <label htmlFor="student-card">University Student Card</label>
