@@ -8,6 +8,11 @@ const rawCertificationCatalog = [
         priceTnd: 0,
       },
       {
+        name: "Coursera Machine Learning Specialization",
+        provider: "Coursera",
+        priceTnd: 160,
+      },
+      {
         name: "TensorFlow Developer Certificate",
         provider: "Google",
         priceTnd: 320,
@@ -52,6 +57,11 @@ const rawCertificationCatalog = [
   {
     type: "Blockchain",
     certifications: [
+      {
+        name: "Blockchain Basics Badge",
+        provider: "Blockchain Council",
+        priceTnd: 0,
+      },
       {
         name: "Certified Blockchain Professional",
         provider: "EC-Council",
@@ -153,9 +163,29 @@ const rawCertificationCatalog = [
     type: "Cybersecurity",
     certifications: [
       {
+        name: "Cisco Networking Academy: Introduction to Cybersecurity",
+        provider: "Cisco",
+        priceTnd: 0,
+      },
+      {
         name: "Fortinet NSE 1 Network Security Associate",
         provider: "Fortinet",
         priceTnd: 0,
+      },
+      {
+        name: "Google IT Support Professional Certificate",
+        provider: "Google",
+        priceTnd: 160,
+      },
+      {
+        name: "IBM Cybersecurity Analyst Professional Certificate",
+        provider: "IBM",
+        priceTnd: 160,
+      },
+      {
+        name: "Cisco Certified Entry Networking Technician (CCENT)",
+        provider: "Cisco",
+        priceTnd: 330,
       },
       { name: "CompTIA Security+", provider: "CompTIA", priceTnd: 1320 },
       {
@@ -186,6 +216,11 @@ const rawCertificationCatalog = [
       {
         name: "IBM Data Science Foundations Badge",
         provider: "IBM",
+        priceTnd: 0,
+      },
+      {
+        name: "Splunk Core Certified User",
+        provider: "Splunk",
         priceTnd: 0,
       },
       {
@@ -239,6 +274,16 @@ const rawCertificationCatalog = [
         priceTnd: 520,
       },
       {
+        name: "MySQL Certified Associate",
+        provider: "Oracle",
+        priceTnd: 320,
+      },
+      {
+        name: "PostgreSQL Professional Developer",
+        provider: "EDB",
+        priceTnd: 300,
+      },
+      {
         name: "Oracle Database SQL Certified Associate",
         provider: "Oracle",
         priceTnd: 800,
@@ -280,6 +325,16 @@ const rawCertificationCatalog = [
     certifications: [
       { name: "GitHub Foundations", provider: "GitHub", priceTnd: 0 },
       {
+        name: "Linux Foundation Certified System Administrator (LFCA)",
+        provider: "Linux Foundation",
+        priceTnd: 295,
+      },
+      {
+        name: "HashiCorp Vault Associate",
+        provider: "HashiCorp",
+        priceTnd: 300,
+      },
+      {
         name: "AWS Certified DevOps Engineer - Professional",
         provider: "AWS",
         priceTnd: 960,
@@ -320,6 +375,11 @@ const rawCertificationCatalog = [
   {
     type: "IT Service Management",
     certifications: [
+      {
+        name: "Atlassian ITSM Fundamentals Badge",
+        provider: "Atlassian University",
+        priceTnd: 0,
+      },
       { name: "ITIL 4 Foundation", provider: "AXELOS", priceTnd: 1250 },
       {
         name: "ITIL 4 Specialist: Create, Deliver and Support",
@@ -445,6 +505,21 @@ const rawCertificationCatalog = [
         provider: "Cisco",
         priceTnd: 0,
       },
+      {
+        name: "Cisco Networking Academy: Introduction to Packet Tracer",
+        provider: "Cisco",
+        priceTnd: 0,
+      },
+      {
+        name: "Cisco Certified Entry Networking Technician (CCENT)",
+        provider: "Cisco",
+        priceTnd: 330,
+      },
+      {
+        name: "Linux Foundation Certified Network Associate",
+        provider: "Linux Foundation",
+        priceTnd: 295,
+      },
       { name: "CCNA", provider: "Cisco", priceTnd: 980 },
       { name: "CompTIA Network+", provider: "CompTIA", priceTnd: 1320 },
       { name: "Juniper JNCIA-Junos", provider: "Juniper", priceTnd: 650 },
@@ -468,9 +543,24 @@ const rawCertificationCatalog = [
     type: "Programming",
     certifications: [
       {
+        name: "freeCodeCamp JavaScript Algorithms and Data Structures",
+        provider: "freeCodeCamp",
+        priceTnd: 0,
+      },
+      {
         name: "freeCodeCamp Scientific Computing with Python",
         provider: "freeCodeCamp",
         priceTnd: 0,
+      },
+      {
+        name: "Zend Certified Associate PHP Engineer",
+        provider: "Zend",
+        priceTnd: 200,
+      },
+      {
+        name: "Linux Foundation - Certified Associate Python Programmer",
+        provider: "Linux Foundation",
+        priceTnd: 295,
       },
       {
         name: "Oracle Certified Professional, Java SE",
@@ -517,6 +607,11 @@ const rawCertificationCatalog = [
   {
     type: "Project Management",
     certifications: [
+      {
+        name: "Agile Project Management Foundations Badge",
+        provider: "HP LIFE",
+        priceTnd: 0,
+      },
       { name: "PMP", provider: "PMI", priceTnd: 1780 },
       {
         name: "Certified ScrumMaster (CSM)",
@@ -544,11 +639,25 @@ const rawCertificationCatalog = [
     type: "QA Testing",
     certifications: [
       {
+        name: "Postman API Fundamentals Student Expert",
+        provider: "Postman",
+        priceTnd: 0,
+      },
+      {
         name: "ISTQB Certified Tester Foundation Level",
         provider: "ISTQB",
         priceTnd: 850,
       },
-      { name: "Certified Agile Tester", provider: "ICAgile", priceTnd: 1250 },
+      {
+        name: "Certified Agile Tester",
+        provider: "ICAgile",
+        priceTnd: 1250,
+      },
+      {
+        name: "Spring Professional Certification",
+        provider: "VMware",
+        priceTnd: 300,
+      },
       {
         name: "Certified Selenium Tester Foundation",
         provider: "Selenium Certification Board",
@@ -584,6 +693,11 @@ const rawCertificationCatalog = [
   {
     type: "UI/UX",
     certifications: [
+      {
+        name: "Figma Design Foundations Badge",
+        provider: "Figma",
+        priceTnd: 0,
+      },
       {
         name: "Google UX Design Professional Certificate",
         provider: "Google",
@@ -629,6 +743,11 @@ const rawCertificationCatalog = [
   {
     type: "Web Development",
     certifications: [
+      {
+        name: "freeCodeCamp Front End Development Libraries",
+        provider: "freeCodeCamp",
+        priceTnd: 0,
+      },
       {
         name: "freeCodeCamp Responsive Web Design",
         provider: "freeCodeCamp",
