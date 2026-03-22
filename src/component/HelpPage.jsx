@@ -614,67 +614,6 @@ function HelpPage({ isAuthenticated }) {
         {saveMessage ? <p className="help-api-status">{saveMessage}</p> : null}
       </section>
 
-      <section className="help-trends">
-        <h2>Hiring Trend Curves by Domain (2024-2030)</h2>
-        <p>
-          Curves are based on U.S. Bureau of Labor Statistics Job Outlook
-          2024-2030 percentages, projected linearly into a 2024-2030 hiring index.
-        </p>
-
-        <div className="domain-trend-grid">
-          {domainTrendSeries.map((series) => (
-            <article key={series.label} className="domain-trend-card">
-              <h3>{series.label}</h3>
-              <p className="domain-trend-meta">
-                Growth: {series.growthPct}% (2024-2030)
-              </p>
-              <a
-                className="domain-trend-source"
-                href={series.sourceUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Source: {series.sourceLabel}
-              </a>
-              <svg
-                viewBox="0 0 320 150"
-                className="domain-trend-chart"
-                role="img"
-                aria-label={`Hiring trend for ${series.label}`}
-              >
-                {[0, 1, 2, 3].map((line) => {
-                  const y = 18 + line * 28;
-                  return (
-                    <line
-                      key={line}
-                      x1="18"
-                      y1={y}
-                      x2="302"
-                      y2={y}
-                      className="chart-grid"
-                    />
-                  );
-                })}
-
-                <polyline
-                  fill="none"
-                  stroke={series.color}
-                  strokeWidth="3"
-                  points={buildSeriesPoints(series.values)}
-                />
-
-                <text x="18" y="146" textAnchor="start" className="chart-year">
-                  {trendYears[0]}
-                </text>
-                <text x="302" y="146" textAnchor="end" className="chart-year">
-                  {trendYears[trendYears.length - 1]}
-                </text>
-              </svg>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="help-grid">
         <article className="help-card">
           <h2>1) Job to Certifications Planner</h2>
@@ -912,9 +851,70 @@ function HelpPage({ isAuthenticated }) {
           ) : null}
         </article>
       </section>
+
+      <section className="help-trends">
+        <h2>Hiring Trend Curves by Domain (2024-2030)</h2>
+        <p>
+          Curves are based on U.S. Bureau of Labor Statistics Job Outlook
+          2024-2030 percentages, projected linearly into a 2024-2030 hiring
+          index.
+        </p>
+
+        <div className="domain-trend-grid">
+          {domainTrendSeries.map((series) => (
+            <article key={series.label} className="domain-trend-card">
+              <h3>{series.label}</h3>
+              <p className="domain-trend-meta">
+                Growth: {series.growthPct}% (2024-2030)
+              </p>
+              <a
+                className="domain-trend-source"
+                href={series.sourceUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Source: {series.sourceLabel}
+              </a>
+              <svg
+                viewBox="0 0 320 150"
+                className="domain-trend-chart"
+                role="img"
+                aria-label={`Hiring trend for ${series.label}`}
+              >
+                {[0, 1, 2, 3].map((line) => {
+                  const y = 18 + line * 28;
+                  return (
+                    <line
+                      key={line}
+                      x1="18"
+                      y1={y}
+                      x2="302"
+                      y2={y}
+                      className="chart-grid"
+                    />
+                  );
+                })}
+
+                <polyline
+                  fill="none"
+                  stroke={series.color}
+                  strokeWidth="3"
+                  points={buildSeriesPoints(series.values)}
+                />
+
+                <text x="18" y="146" textAnchor="start" className="chart-year">
+                  {trendYears[0]}
+                </text>
+                <text x="302" y="146" textAnchor="end" className="chart-year">
+                  {trendYears[trendYears.length - 1]}
+                </text>
+              </svg>
+            </article>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
 
 export default HelpPage;
-
