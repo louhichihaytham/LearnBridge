@@ -13,6 +13,31 @@ const rawCertificationCatalog = [
         priceTnd: 160,
       },
       {
+        name: "NVIDIA Certified Associate: Generative AI and LLMs",
+        provider: "NVIDIA",
+        priceTnd: 520,
+      },
+      {
+        name: "NVIDIA Deep Learning Institute Course Certificate",
+        provider: "NVIDIA",
+        priceTnd: 0,
+      },
+      {
+        name: "Google Professional Machine Learning Engineer",
+        provider: "Google",
+        priceTnd: 650,
+      },
+      {
+        name: "Microsoft Certified: Azure AI Fundamentals (AI-900)",
+        provider: "Microsoft",
+        priceTnd: 320,
+      },
+      {
+        name: "IBM AI Engineering Professional Certificate",
+        provider: "IBM",
+        priceTnd: 180,
+      },
+      {
         name: "TensorFlow Developer Certificate",
         provider: "Google",
         priceTnd: 320,
@@ -133,6 +158,31 @@ const rawCertificationCatalog = [
         priceTnd: 520,
       },
       {
+        name: "Google Professional Cloud Architect",
+        provider: "Google",
+        priceTnd: 650,
+      },
+      {
+        name: "Google Professional Cloud Developer",
+        provider: "Google",
+        priceTnd: 650,
+      },
+      {
+        name: "Microsoft Certified: Azure Administrator Associate (AZ-104)",
+        provider: "Microsoft",
+        priceTnd: 520,
+      },
+      {
+        name: "Microsoft Certified: Azure Solutions Architect Expert (AZ-305)",
+        provider: "Microsoft",
+        priceTnd: 520,
+      },
+      {
+        name: "IBM Certified Technical Advocate - Cloud v3",
+        provider: "IBM",
+        priceTnd: 420,
+      },
+      {
         name: "AWS Certified SysOps Administrator - Associate",
         provider: "AWS",
         priceTnd: 520,
@@ -180,6 +230,21 @@ const rawCertificationCatalog = [
       {
         name: "IBM Cybersecurity Analyst Professional Certificate",
         provider: "IBM",
+        priceTnd: 160,
+      },
+      {
+        name: "Cisco Certified CyberOps Associate",
+        provider: "Cisco",
+        priceTnd: 520,
+      },
+      {
+        name: "Microsoft Certified: Security Operations Analyst Associate (SC-200)",
+        provider: "Microsoft",
+        priceTnd: 520,
+      },
+      {
+        name: "Google Cybersecurity Professional Certificate",
+        provider: "Google",
         priceTnd: 160,
       },
       {
@@ -232,6 +297,31 @@ const rawCertificationCatalog = [
         name: "Google Data Analytics Professional Certificate",
         provider: "Google",
         priceTnd: 160,
+      },
+      {
+        name: "Google Business Intelligence Professional Certificate",
+        provider: "Google",
+        priceTnd: 160,
+      },
+      {
+        name: "Microsoft Certified: Azure Data Fundamentals (DP-900)",
+        provider: "Microsoft",
+        priceTnd: 320,
+      },
+      {
+        name: "Microsoft Certified: Azure Data Engineer Associate (DP-203)",
+        provider: "Microsoft",
+        priceTnd: 520,
+      },
+      {
+        name: "IBM Data Engineering Professional Certificate",
+        provider: "IBM",
+        priceTnd: 180,
+      },
+      {
+        name: "NVIDIA DLI Certificate: Fundamentals of Deep Learning",
+        provider: "NVIDIA",
+        priceTnd: 0,
       },
       {
         name: "Tableau Certified Data Analyst",
@@ -294,6 +384,11 @@ const rawCertificationCatalog = [
         priceTnd: 520,
       },
       {
+        name: "Microsoft Certified: Azure Cosmos DB Developer Specialty (DP-420)",
+        provider: "Microsoft",
+        priceTnd: 520,
+      },
+      {
         name: "MongoDB Database Administrator Associate",
         provider: "MongoDB",
         priceTnd: 520,
@@ -333,6 +428,21 @@ const rawCertificationCatalog = [
         name: "HashiCorp Vault Associate",
         provider: "HashiCorp",
         priceTnd: 300,
+      },
+      {
+        name: "Microsoft Certified: DevOps Engineer Expert (AZ-400)",
+        provider: "Microsoft",
+        priceTnd: 520,
+      },
+      {
+        name: "Google Professional Cloud DevOps Engineer",
+        provider: "Google",
+        priceTnd: 650,
+      },
+      {
+        name: "IBM DevOps and Software Engineering Professional Certificate",
+        provider: "IBM",
+        priceTnd: 180,
       },
       {
         name: "AWS Certified DevOps Engineer - Professional",
@@ -516,6 +626,11 @@ const rawCertificationCatalog = [
         priceTnd: 330,
       },
       {
+        name: "Cisco Certified Network Professional Enterprise (CCNP Enterprise)",
+        provider: "Cisco",
+        priceTnd: 1600,
+      },
+      {
         name: "Linux Foundation Certified Network Associate",
         provider: "Linux Foundation",
         priceTnd: 295,
@@ -576,6 +691,21 @@ const rawCertificationCatalog = [
         name: "Microsoft Certified: Azure Developer Associate (AZ-204)",
         provider: "Microsoft",
         priceTnd: 520,
+      },
+      {
+        name: "Microsoft Certified: Power Platform Developer Associate (PL-400)",
+        provider: "Microsoft",
+        priceTnd: 520,
+      },
+      {
+        name: "Google Associate Android Developer",
+        provider: "Google",
+        priceTnd: 520,
+      },
+      {
+        name: "IBM Full Stack Software Developer Professional Certificate",
+        provider: "IBM",
+        priceTnd: 180,
       },
       {
         name: "AWS Certified Developer - Associate",
