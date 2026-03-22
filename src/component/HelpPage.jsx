@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { certificationCatalog } from "../data/certifications";
 import { appendItem, storage } from "../utils/careerData";
@@ -238,6 +238,7 @@ function inferLearningLevel(price) {
 
 function HelpPage({ isAuthenticated }) {
   const savedState = useMemo(() => readSavedGetHiredState(), []);
+  const cvUploadRef = useRef(null);
 
   const [selectedRole, setSelectedRole] = useState(
     savedState?.selectedRole || "",
@@ -479,7 +480,24 @@ function HelpPage({ isAuthenticated }) {
     setJobMatchResult(null);
     setJobMatchError("");
     setSaveMessage("Current Get Hired search cleared.");
+    if (cvUploadRef.current) {
+      cvUploadRef.current.value = "";
+    }
     sessionStorage.removeItem(GET_HIRED_STATE_KEY);
+  };
+
+  const clearJobMatchSearch = () => {
+    setSkillsText("");
+    setCvFileName("");
+    setCvFile(null);
+    setFileError("");
+    setJobMatchResult(null);
+    setJobMatchError("");
+    setSaveMessage("CV/Skills search cleared.");
+
+    if (cvUploadRef.current) {
+      cvUploadRef.current.value = "";
+    }
   };
 
   const generateJobMatches = async () => {
@@ -723,6 +741,7 @@ function HelpPage({ isAuthenticated }) {
           </label>
           <input
             id="cv-upload"
+            ref={cvUploadRef}
             type="file"
             accept=".txt,.pdf"
             onChange={handleCvUpload}
@@ -749,6 +768,13 @@ function HelpPage({ isAuthenticated }) {
             onClick={saveCurrentSearch}
           >
             Save Search
+          </button>
+          <button
+            type="button"
+            className="help-secondary-button"
+            onClick={clearJobMatchSearch}
+          >
+            Clear Search
           </button>
 
           {jobMatchError ? <p className="help-error">{jobMatchError}</p> : null}
