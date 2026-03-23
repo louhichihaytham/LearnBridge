@@ -130,7 +130,7 @@ function CertificationTypePage() {
             </div>
           )}
 
-          <h3>Free University Courses</h3>
+          <h3>Free Courses</h3>
           <ul className="free-course-list">
             {selectedDomain.freeCourses.map((course) => (
               <li key={course.title}>

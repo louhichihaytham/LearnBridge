@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { certificationCatalog } from "../data/certifications";
 import { appendItem, storage } from "../utils/careerData";
-import { apiUrl } from "../utils/api";
 import "../CSS/HelpPage.css";
 
 const GET_HIRED_STATE_KEY = "learnbridge-get-hired-state";
@@ -356,8 +355,7 @@ function HelpPage({ isAuthenticated }) {
     }
 
     const lowerName = String(file.name || "").toLowerCase();
-    const isPdf =
-      file.type === "application/pdf" || lowerName.endsWith(".pdf");
+    const isPdf = file.type === "application/pdf" || lowerName.endsWith(".pdf");
     const isTxt = file.type.startsWith("text/") || lowerName.endsWith(".txt");
 
     if (!isPdf && !isTxt) {
@@ -521,7 +519,7 @@ function HelpPage({ isAuthenticated }) {
         formData.append("cvFile", cvFile);
       }
 
-      const response = await fetch(apiUrl("/api/ai/job-matches"), {
+      const response = await fetch("http://localhost:3001/api/ai/job-matches", {
         method: "POST",
         body: formData,
       });
