@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams, useNavigate, Link } from "react-router-dom";
 import "../CSS/PaymentPage.css";
 import { appendItem, storage } from "../utils/careerData";
+import { apiUrl } from "../utils/api";
 
 function providerSlug(provider) {
   return String(provider || "")
@@ -136,23 +137,20 @@ function PaymentPage({ isAuthenticated }) {
 
     try {
       // Call backend to create payment intent
-      const response = await fetch(
-        "http://localhost:3001/api/payments/create-intent",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email,
-            certificationName: certification.name,
-            certificationProvider: certification.provider,
-            certificationPrice: certification.price,
-            cardholderName: cardholderName.trim(),
-            cardLast4: normalizedCardNumber.slice(-4),
-          }),
+      const response = await fetch(apiUrl("/api/payments/create-intent"), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify({
+          email,
+          certificationName: certification.name,
+          certificationProvider: certification.provider,
+          certificationPrice: certification.price,
+          cardholderName: cardholderName.trim(),
+          cardLast4: normalizedCardNumber.slice(-4),
+        }),
+      });
 
       const data = await response.json();
 
