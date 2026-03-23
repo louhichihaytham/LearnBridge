@@ -25,7 +25,12 @@ function isTunisianUniversityEmail(email) {
   }
 
   const domain = parts[1];
-  return domain.endsWith(".rnu.tn") || UNIVERSITY_DOMAINS.includes(domain);
+  const matchesKnownDomain = UNIVERSITY_DOMAINS.some(
+    (allowedDomain) =>
+      domain === allowedDomain || domain.endsWith(`.${allowedDomain}`),
+  );
+
+  return domain.endsWith(".rnu.tn") || matchesKnownDomain;
 }
 
 function UniversityLogin({ onVerified, isAuthenticated }) {
