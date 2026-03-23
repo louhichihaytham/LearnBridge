@@ -28,3 +28,7 @@ dist-ssr
 last_response.html
 sample_cv.txt
 empty_cv.txt
+
+# Python cache artifacts
+__pycache__/
+*.py[cod]
